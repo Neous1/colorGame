@@ -14,17 +14,17 @@ var hardBtn = document.getElementById("hardBtn");
 easyBtn.addEventListener("click", function(){
     hardBtn.classList.remove("selected");
     easyBtn.classList.add("selected");
-    numSquares = 3
+    numSquares = 3;
     colors = generateRandomColors(numSquares);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
     // change the color of the squares 
     for (var i = 0; i < squares.length; i++){
-        if (colors[i]){
+        if (colors[i]){ 
             squares[i].style.background = colors[i];
         }
         else{
-            squares[i].style.background = "none";
+            squares[i].style.display = "none";
         }
     }
 });
@@ -38,7 +38,7 @@ hardBtn.addEventListener("click", function(){
     // change the color of the squares 
     for (var i = 0; i < squares.length; i++){
         squares[i].style.background = colors[i];
-        squares[i].style.background = "block";
+        squares[i].style.display = "block";
     }
 });
 
@@ -53,7 +53,7 @@ resetButton.addEventListener("click", function(){
     for (var i= 0; i < squares.length; i++){
         squares[i].style.background = colors[i];
     }
-    h1.style.background ="#232323";
+    h1.style.background ="steelblue";
 });
 
 
